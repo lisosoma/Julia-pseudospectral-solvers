@@ -8,6 +8,8 @@ The convergence of spectral differentiation can be seen in the figure below. Unl
 
 ![convergence](сonvergence_spectral_diff.png)
 
+![KS](!(images/heatmap_KS7.png)
+
 ## References
 
 1. Canuto C., Hussaini M. Y., Quarteroni A., and Zang T.A. (2006) Spectral Methods. Fundamentals in Single Domains. Springer-Verlag, Berlin Heidelberg
