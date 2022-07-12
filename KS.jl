@@ -34,7 +34,9 @@ end
 # function for right part of KS equation
 
 function phi(F, l)
-    return [F[k] * (2 * pi * k / (l * pi))^2 -  F[k] * (2 * pi * k / (l * pi))^4 for k=1:length(F)]
+    return [F[k] * (2 * pi * k / (l * pi))^2 -  
+            F[k] * (2 * pi * k / (l * pi))^4 
+            for k=1:length(F)]
 end
 
 
