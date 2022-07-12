@@ -8,7 +8,7 @@ The convergence of spectral differentiation can be seen in the figure below. Unl
 
 ![convergence](сonvergence_spectral_diff.png)
 
-![KS](!(images/heatmap_KS7.png)
+![KS](images/heatmap_KS7.png)
 
 ## References
 
