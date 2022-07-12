@@ -8,6 +8,10 @@ The convergence of spectral differentiation can be seen in the figure below. Unl
 
 ![convergence](сonvergence_spectral_diff.png)
 
+## Results
+
+### Kuramoto–Sivashinsky equation
+
 ![KS](images/heatmap_KS7.png)
 
 ## References
