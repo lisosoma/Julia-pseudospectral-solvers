@@ -1,6 +1,6 @@
-import Pkg
-Pkg.add("Plots")
-Pkg.add("FFTW")
+#import Pkg
+#Pkg.add("Plots")
+#Pkg.add("FFTW")
 using Plots
 using FFTW
 
@@ -24,8 +24,7 @@ end
 
 function DN_generator(N, l)
     h = l * pi / N
-    M = [mod(j, N) != 0 ? (-1) ^ (j+1) * 
-         cot(j * h / l) / l : 0 for j = 0:(N - 1)]
+    M = [mod(j, N) != 0 ? (-1) ^ (j+1) * cot(j * h / l) / l : 0 for j = 0:(N - 1)]
     DN = transpose.(toeplitz(M))
     return DN
 end
@@ -34,24 +33,23 @@ end
 # function for right part of KS equation
 
 function phi(F, l)
-    return [F[k] * (2 * pi * k / (l * pi))^2 -  
-            F[k] * (2 * pi * k / (l * pi))^4 
-            for k=1:length(F)]
+    return [F[k] * (2 * pi * k / (l * pi))^2 - F[k] * (2 * pi * k / (l * pi))^4 for k=1:length(F)]
 end
 
 
 #----------------------------------------------------#
 # solution
 
-N = 200 # number of grid points
-l = 30
+N = 100 # number of grid points
+l = 20
 DN = DN_generator(N, l)
 
 x = zeros(N) # points of grid
 x = [l * pi * j / N for j = 1:N]
 
-T = 200 # time
+T = 100 # time
 h = ((l * pi / N) ^ 2) / 300
+t = [h * i for i=1:round(Int, T / h)]
 
 u0 = [[(cos(l*pi*x[i] / 2)) for i=1:N]]
 for j = 1:round(Int, T / h - 1)

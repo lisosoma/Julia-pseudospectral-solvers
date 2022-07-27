@@ -12,6 +12,8 @@ The convergence of spectral differentiation can be seen in the figure below. Unl
 
 ### Kuramoto–Sivashinsky equation
 
+This equation was solved by Fourier Collocation Method.
+
 ![KS](images/heatmap_KS7.png)
 
 ## References
